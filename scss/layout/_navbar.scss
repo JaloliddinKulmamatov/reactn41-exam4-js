@@ -1,0 +1,28 @@
+.nav__top {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    padding:8px 15px;
+    display: flex !important;
+    gap: 20px;
+    align-items: center;
+    box-shadow: 2px 4px 8px 0px #0000001a;      
+    input {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid var(--Main-Secondary, #70C05B);
+        background: var(--Main-Surface, #FFF);
+    }
+}
+
+.nav__bottom {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    padding: 8px 15px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
