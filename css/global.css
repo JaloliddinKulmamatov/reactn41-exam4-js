@@ -61,6 +61,10 @@ a {
   text-decoration: none;
 }
 
+iframe {
+  width: 100%;
+}
+
 @font-face {
   font-family: "Rubik900", sans-serif;
   src: url(/assets/fonts/static/Rubik-Black.ttf);
