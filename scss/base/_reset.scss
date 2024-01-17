@@ -4,8 +4,14 @@
     font-family: 'Rubik' ,sans-serif;
 }
 
+
+
 *,*::after,*::before {
     box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
 }
 
 a {
