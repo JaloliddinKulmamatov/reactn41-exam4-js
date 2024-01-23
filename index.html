@@ -4,48 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&amp;display=swap" rel="stylesheet">
     <title>HOME</title>
 </head>
 <body>
-     <nav id = "navbar">
-            <div class="nav__top">
-                <img src="/assets/img/./nav/nav__logo.svg" alt="abc">
-                <form>
-                    <input type="text" placeholder="Найти товар">
-                </form>
+    <div id="katalog" style="top: 70px;">
+        <div class="katalog__menu container__1250">
+            <ul>
+                <img src="./assets/img/nav/hamburger-menu.png" alt="">
+            </ul>
+        </div>
+    </div>
+    <nav id="navbar">
+        <ul class="nav__list">
+            <a href="#" class="header__logo">
+                <img src="./assets/img/nav/nav__logo.svg" alt="logo" />
+            </a>
+            <div class="nav__toggle">
+                <button>
+                    <img src="assets/img/nav/catalog.svg" alt="abc">
+                </button>
+                <a href="pages/categories.html">Каталог</a>
             </div>
-            <div class="nav__bottom">
-                <span>
-                   <a href="pages/categories.html">
-                        <img src="./assets/img/./nav/catalog.svg" alt="abc">
-                   </a> 
-                    <p>Каталог</p>
-                </span>
-                <span>
-                    <a href="./pages/favorite.html">
-                        <img src="./assets/img/./nav/lovely.svg" alt="abc">
-                    </a>  
+            <div class="InputContainer">
+                <input placeholder="Search.." id="input" class="input" name="text" type="text">
+            </div>
+            <div class="icons">
+                <a href="./pages/about.html"><img src="./assets/img/nav/lovely.svg" alt="icon" />
                     <p>Избранное</p>
-                </span>
-                <span>
-                    <a href="./pages/product.html">
-                        <img src="./assets/img/./nav/delive.svg" alt="abc">
-                    </a>
+                </a>
+                <a href="./pages/contact.html"><img src="./assets/img/nav/delive.svg" alt="icon" />
                     <p>продукты</p>
-                </span>
-                <span>
-                    <a href="./pages/cart.html">
-                        <img src="./assets/img/nav/basket.svg" alt="abc">
-                    </a>
+                </a>
+                <a href="./pages/cart.html">
+                    <img src="./assets/img/nav/basket.svg" alt="abc">
                     <p>Корзина</p>
-                </span>
-                <span>
-                    <a href="./pages/vacancy.html">
-                        <img src="./assets/img/nav/avatar.png" alt="abc">
-                    </a>
-                </span>
+                </a>
             </div>
-    </nav> 
+            <div class="user">
+                <img src="./assets/img/nav/avatar.png" alt="logo" />
+                <h2>Алексей</h2>
+            </div>
+        </ul>
+    </nav>
 
     <header>
         <section id="header__adverse">
@@ -454,5 +457,28 @@
             </div>
         </div>
     </footer>
+<script src="./js/script.js"></script>
+<script>
+    window.onload = function () {
+        var dropdown = document.getElementById("katalog");
+        var toggleButton = document.querySelector('.nav__toggle button');
+
+        toggleButton.onclick = function (event) {
+            // Toggle the display property of the dropdown
+            dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
+
+            // Prevent the click event from propagating to the window.onclick handler
+            event.stopPropagation();
+        };
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function () {
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        };
+    }
+
+</script>
 </body>
 </html>
